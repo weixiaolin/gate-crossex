@@ -4,6 +4,7 @@ import helmet from '@fastify/helmet';
 import rateLimit from '@fastify/rate-limit';
 import fastifyStatic from '@fastify/static';
 import websocket from '@fastify/websocket';
+import compress from '@fastify/compress';
 import Fastify, { type FastifyInstance, type FastifyReply } from 'fastify';
 import type Database from 'better-sqlite3';
 import { randomUUID } from 'node:crypto';
@@ -835,7 +836,7 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
   };
 
   const app = Fastify({
-    bodyLimit: 16 * 1024,
+    bodyLimit: 128 * 1024,
     logger:
       options.logger === false
         ? false
@@ -866,10 +867,12 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
     app.log.info(maintenanceResult, 'pruned expired local database records');
   }
 
+  await app.register(compress)
+
   await app.register(helmet, { contentSecurityPolicy: false });
   await app.register(rateLimit, { max: options.rateLimitMax ?? 120, timeWindow: '1 minute' });
   await app.register(cors, { origin: [...config.allowedOrigins], credentials: false });
-  await app.register(formbody, { bodyLimit: 16 * 1024 });
+  await app.register(formbody, { bodyLimit: 128 * 1024 });
   await app.register(websocket);
 
   const frontendIndexPath = join(config.frontendDistPath, 'index.html');

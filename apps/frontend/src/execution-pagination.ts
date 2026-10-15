@@ -1,4 +1,4 @@
-export const EXECUTION_PAGE_SIZE = 10;
+export const EXECUTION_PAGE_SIZE = 11;
 
 export type ExecutionPageWindow = {
   page: number;
