@@ -48,5 +48,8 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.65.0",
     "vitest": "3.2.7"
+  },
+  "dependencies": {
+    "@fastify/compress": "^9.2.0"
   }
 }
