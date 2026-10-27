@@ -1330,7 +1330,7 @@ html[data-theme='light'] .pair-row-star.active { color: #d09a19; }
 .asset-row small b { font-weight: 600; }
 .portfolio-tables { margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .portfolio-tables .panel-tabs { overflow-x: unset; }
-.portfolio-tables .table-wrap { max-height: 720px; overflow: auto; }
+.portfolio-tables .table-wrap { max-height: 820px; overflow: auto; }
 .portfolio-tables th { position: sticky; top: 0; z-index: 2; background: var(--panel); }
 .panel-tabs .table-source { align-self: center; margin-left: 8px; color: #566376; font-size: var(--text-small); white-space: nowrap; }
 .portfolio-operations { display: grid; grid-template-columns: minmax(330px, 420px) minmax(0, 1fr); gap: 14px; margin-top: 14px; }
