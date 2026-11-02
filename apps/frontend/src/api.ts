@@ -308,7 +308,7 @@ export const api = {
     headers: { 'x-gct-read-intent': 'transfer-balances' },
   }),
   portfolioActivity: (coin?: string) => {
-    const params = new URLSearchParams({ limit: '100' });
+    const params = new URLSearchParams({ limit: '200' });
     if (coin) params.set('coin', coin);
     return request(CrossExPortfolioActivityResponseSchema, `/api/crossex/portfolio-activity?${params}`, {
       headers: { 'x-gct-read-intent': 'portfolio-activity' },
