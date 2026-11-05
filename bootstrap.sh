@@ -18,7 +18,7 @@ if [ -f "$INSTALL_DIR/.gate-crossex-source.json" ]; then
 fi
 REPO_SLUG="${GCT_REPO_SLUG:-${SAVED_REPO:-weixiaolin/gate-crossex}}"
 SOURCE_REF="${GCT_SOURCE_REF:-${SAVED_REF:-main}}"
-NODE_VERSION="${GCT_NODE_VERSION:-24.18.0}"
+NODE_VERSION="${GCT_NODE_VERSION:-26.13.0}"
 MODE="${1:-install}"
 TMP=""
 NEW_ROOT=""
