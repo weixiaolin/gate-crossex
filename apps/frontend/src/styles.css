@@ -1326,7 +1326,7 @@ html[data-theme='light'] .pair-row-star.active { color: #d09a19; }
 .donut-wrap li span small { color: #5f6d80; font-family: var(--font-sans); font-size: var(--text-caption); }
 .donut-empty { grid-column: 1 / -1; display: grid; justify-items: center; gap: 18px; }
 .donut-empty p { margin: 0; color: #667386; font-size: var(--text-small); line-height: 1.6; text-align: center; }
-.balance-scroll { max-height: 442px; overflow-y: auto; }
+.balance-scroll { max-height: 456px; overflow-y: auto; }
 .asset-row small b { font-weight: 600; }
 .portfolio-tables { margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .portfolio-tables .panel-tabs { overflow-x: unset; }
