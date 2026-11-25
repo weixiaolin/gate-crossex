@@ -194,7 +194,7 @@ function rotateLog(path, maximumBytes = 5 * 1024 * 1024, retainedFiles = 3) {
   }
 }
 
-async function waitForUrl(url, childProcesses, timeoutMs = 30_000) {
+async function waitForUrl(url, childProcesses, timeoutMs = 60_000) {
   const startedAt = Date.now();
   while (Date.now() - startedAt < timeoutMs) {
     if (childProcesses.some((child) => child.exitCode !== null)) {
